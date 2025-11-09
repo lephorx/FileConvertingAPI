@@ -214,7 +214,3 @@ Tell me which of those you'd like next and I will implement it.
 ## License
 
 MIT. See `LICENSE` if present.
-
----
-
-If any of the commands or paths above don't match your current project layout, tell me what differs and I'll adapt the README and scripts accordingly.

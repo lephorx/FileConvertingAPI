@@ -1,7 +1,20 @@
-.venv
+# Environment & virtual env
+.venv/
 venv/
-app.log
 .env
 __pycache__/
+
+# Logs (ignore all files but keep folder)
+logs/*
+!logs/.gitkeep
+
+# Converted files (ignore all but keep folder)
 converted/*
+!converted/.gitkeep
+
+# Uploaded files (ignore all but keep folder)
 uploads/*
+!uploads/.gitkeep
+
+# Misc
+app.log

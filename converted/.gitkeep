@@ -1,0 +1,2 @@
+# This file ensures the converted directory is tracked by git while ignoring all converted files
+# You can safely delete this file once there are other files to track in this directory

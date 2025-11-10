@@ -4,6 +4,7 @@ import subprocess
 import os
 import uuid
 from utils.logger_config import setup_logger
+from auth import verify_api_key
 
 app = FastAPI(title="Media File Converter")
 
@@ -21,7 +22,8 @@ async def root():
 @app.post("/convert")
 async def convert_media(
     file: UploadFile = File(...),
-    output_format: str = Form(default="mp3")
+    output_format: str = Form(default="mp3"),
+    authorized: bool = Depends(verify_api_key)
 ):
     file_id = str(uuid.uuid4())
     input_path = os.path.join(UPLOAD_DIR, f"{file_id}_{file.filename}")
